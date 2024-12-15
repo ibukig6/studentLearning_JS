@@ -1,0 +1,17 @@
+*{
+    font-family: 'Noto Serif TC', serif;
+    padding:0px;
+    margin:0px;
+    text-decoration: none;
+    color:black;
+}
+
+body{
+    min-height: 1000px;
+    padding-top:100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right:32px;
+    background-color: #fafafa;
+}

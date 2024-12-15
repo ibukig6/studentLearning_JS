@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗3</title>
+        <style>
+            button {
+                font-size: 25px;
+                margin-right: 10px;
+
+            }
+            p {
+                font-size: 25px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            img {
+                height: 200px;
+                display: block;
+                /* margin-top:50px; */
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="
+            showCart();
+        ">購物車總額</button>
+        
+        <button onclick="
+            cart1 = JSON.parse(localStorage.getItem('cart2'));
+
+            cart1.productNum = 0;
+            cart1.product1.num = 0;
+            cart1.product2.num = 0;
+            cart1.totalPrice = 0;
+            console.log('購物車已清空');
+
+            localStorage.setItem('cart2',JSON.stringify(cart1));
+            showCart();
+        ">清空購物車</button>
+        <br>
+        
+        <img src="hot pot.jpg">
+        <br>
+        <p>$100</p>
+        <button onclick='
+            cart1 = JSON.parse(localStorage.getItem("cart2"));
+
+            cart1.productNum +=1;
+            cart1.product1.num++
+            cart1.totalPrice += 100;
+
+            localStorage.setItem("cart2",JSON.stringify(cart1));
+            showCart();
+        '>加入購物車</button>
+
+        <img src="gift.png">
+        <br>
+        <p>$200</p>
+        <button onclick='
+            //讀取資料
+            cart1 = JSON.parse(localStorage.getItem("cart2"));
+            //修改資料
+            cart1.productNum++
+            cart1.product2.num++
+            cart1.totalPrice += 200;
+            //存入資料
+            localStorage.setItem("cart2",JSON.stringify(cart1));
+            showCart();
+        '>加入購物車</button>
+
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+        
+        <script>
+
+            if (cart2 === null) {
+                cart2 = {
+                    productNum: 0,
+                    product1: {
+                        num: 0,
+                        name: "海底撈火鍋",
+                        price: 100
+                    },
+                    product2: {
+                        num: 0,
+                        name: "雞精",
+                        price: 200
+                    },
+                    totalPrice: 0
+                    };
+            }
+
+            /*
+            let cart = {
+                productNum: 0,
+                product1: {
+                    num: 0,
+                    name: "海底撈火鍋",
+                    price: 100
+                },
+                product2: {
+                    num: 0,
+                    name: "雞精",
+                    price: 200
+                },
+                totalPrice: 0
+            };
+
+            function showCart() {
+                console.log(`目前商品數 : ${cart1.productNum}`);
+                console.log(`${cart1.product1.name}有 : ${cart1.product1.num} 個`);
+                console.log(`${cart1.product2.name}有 : ${cart1.product2.num} 個`);
+                console.log(`目前購物車總額 : ${cart1.totalPrice}`);
+            };
+            */
+
+            //首先，我們先把資料存進瀏覽器裡
+            // const jsonCart = JSON.stringify(cart); //先轉成JSON格式
+            // localStorage.setItem("cart2",jsonCart); //再丟入localStorage裡
+
+            //當我們需要使用時，再把資料轉換回來
+            let cart1 = localStorage.getItem("cart2");
+            cart1 = JSON.parse(cart1);   //這一步甚至可以直接塞入下面那一行裡
+            console.log(cart1);
+
+
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <img src="gift.png">
+        <br>
+        <p>$200</p>
+        <button onclick='
+            //讀取資料
+            cart1 = JSON.parse(localStorage.getItem("cart2"));
+            //修改資料
+            cart1.productNum++
+            cart1.product2.num++
+            cart1.totalPrice += 200;
+            //存入資料
+            jsonCart = JSON.stringify(cart1);
+            localStorage.setItem("cart2",jsonCart);
+            showCart();
+        '>加入購物車</button> -->

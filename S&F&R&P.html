@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>scope 作用域(全域變數 區域變數) & function 函數(函式) & return 回傳 & parameter 參數</title>
+        <style>
+            p {
+                font-size:30px;
+            }
+
+            button {
+                font-size:30px;
+                margin-right: 20px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>請選擇 剪刀 石頭 布</p>
+        <button onclick='
+            const computerChoice = generateComputerChoice();
+
+            if (computerChoice === "剪刀") {
+                alert(`你出剪刀 電腦出${computerChoice} 此局平手`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出剪刀 電腦出${computerChoice} 此局電腦獲勝`);
+            } else {
+                alert(`你出剪刀 電腦出${computerChoice} 此局你獲勝`);
+            }
+        '>剪刀</button>
+        <button onclick='
+            const computerChoice =  generateComputerChoice();
+
+            if (computerChoice === "剪刀") {
+                alert(`你出石頭 電腦出${computerChoice} 此局你獲勝`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出石頭 電腦出${computerChoice} 此局平手`);
+            } else {
+                alert(`你出石頭 電腦出${computerChoice} 此局電腦獲勝`);
+            }
+        '>石頭</button>
+        <button onclick='
+            const computerChoice = generateComputerChoice();
+
+            if (computerChoice === "布") {
+                alert(`你出布 電腦出${computerChoice} 此局電腦獲勝`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出布 電腦出${computerChoice} 此局你獲勝`);
+            } else {
+                alert(`你出布 電腦出${computerChoice} 此局平手`);
+            }
+        '>布</button>
+
+            <br><br><br><a href="index.html">返回上一頁</a>
+
+        <script>
+            //區域變數
+            // if (true) {
+            //     let a = 0;   //這個變數只能在這個大括號裡面使用
+            // }
+            // //console.log(a);
+
+            // //全域變數
+            // let b = 1;       //這個變數並沒有被括號包住，所以 script 範圍內都可以使用此變數
+            // console.log(b);
+
+
+
+//***********************************  函數  *******************************************
+
+            //函數:讓我們重複使用一段程式碼
+            //功能:製作一個自訂的功能，需要用到時就拿出來用
+
+            // function hello() {                  //這行黃色的字就是此函數的名稱  ps:這個也有命名規則(可參考variable.html那個程式碼)
+            //     console.log("你好");
+            //     console.log("小白");
+            // }
+            // hello();  //呼叫函數
+
+            function generateComputerChoice() {
+                const randomNum = Math.random()*3;
+                let computerChoice = "";
+                console.log(randomNum);
+                if (0<=randomNum && randomNum<1) {
+                    computerChoice = "剪刀";
+                } else if (1<=randomNum && randomNum<2) {
+                    computerChoice = "石頭";
+                } else {
+                    computerChoice = "布";
+                }
+                return computerChoice;
+            }
+
+//***********************************  函數的回傳  *******************************************
+
+            //函數(函式) 回傳 return
+            // function hello2() {
+            //     console.log("你好");
+            //     return 55;    //這裡可以放要回傳的資料，可以是字串、數字等資料   ps:如果沒有回傳資料的話，預設就是undefined
+            //     console.log("你好2");  //當函式寫了return後，就會直接停止這段程式了，這行程式也就不會執行了
+            // }
+            
+            // console.log(hello2());
+
+            // let num = hello2();
+            // console.log(num+1);
+
+
+
+//***********************************  函數參數  *******************************************
+
+            //函數(函式)參數 parameter
+            function calculateDiscount(price,discount,test=0.9) {//在函數的小括號裡面可以放參數，這樣就能把數值傳到函數裡做使用了
+                                                //可以預設參數的值，假設少傳了一個數值，那參數至少會有一個值代表它
+                const discountPrice = price*discount+test;
+                return discountPrice;
+            }
+
+            let price = 4000;
+                            //數值要輸入在下面↓粉色括號裡      ps:設置多少參數，就能傳入多少數值
+            console.log(calculateDiscount(price,0.5));//對應114行，我們這裡只放兩個值，但上面有3個參數
+
+            //ps: alert就是js內建的函數，我們可以傳文字、數字進去
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>array 陣列補充</title>
+    </head>
+    <body>
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+        <script>
+            // 陣列(數組) 跟物件一樣是引用類型(reference type)
+
+            let a = [1, 2, 3];  //這個方法會讓電腦的某個位置有這些資料，然後 變數a 存的其實是這個位置的地址
+            let b = a;  //而這裡存的其實不是[1, 2, 3]，而是與 a 相同的地址
+
+            b.push(4);  //所以就算我們以為我們 "只有" 改變 b 的資料
+            console.log(a); //實際上 a 也受了影響，因為 這兩個變數存取的資料實際上是同一筆資料
+
+            let c = a.slice();  //這個方法則是複製一份資料，這樣就不會影響到了
+            b.push(5);
+            console.log("我是資料a:"+a);
+            console.log("我是資料c:"+c);
+            
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗6</title>
+    </head>
+    <body>
+
+        <input class="inputHeight" placeholder="請輸入身高(公分)"><br>
+        <input class="inputWeight" placeholder="請輸入體重(公斤)"><br>
+        <button onclick="
+            BMI();
+        ">計算BMI</button><br>
+        <p>BMI:</p>
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+        <script>
+            function BMI() {
+                let height = document.querySelector(".inputHeight").value;
+                let weight = document.querySelector(".inputWeight").value;
+                height = Number(height)/100;
+                weight = Number(weight);
+                let BMI = weight / (height*height);
+                document.querySelector("p").innerHTML = `
+                    BMI: ${BMI.toFixed(1)}
+                `;
+            }
+            
+        </script>
+    </body>
+</html>

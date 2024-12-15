@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗3影片版</title>
+        <style>
+            button {
+                font-size: 25px;
+                margin-right: 10px;
+
+            }
+            p {
+                font-size: 25px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            img {
+                height: 200px;
+                display: block;
+                /* margin-top:50px; */
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="
+            showCart();
+        ">購物車總額</button>
+        
+        <button onclick="
+            cart.productNum = 0;
+            cart.product1.num = 0;
+            cart.product2.num = 0;
+            cart.totalPrice = 0;
+            console.log('購物車已清空');
+            localStorage.removeItem('cart');
+            showCart();
+        ">清空購物車</button>
+        <br>
+        
+        <img src="hot pot.jpg">
+        <br>
+        <p>$100</p>
+        <button onclick='
+            cart.productNum +=1;
+            cart.product1.num++
+            cart.totalPrice += 100;
+
+            saveCart();
+            showCart();
+        '>加入購物車</button>
+
+        <img src="gift.png">
+        <br>
+        <p>$200</p>
+        <button onclick='
+            cart.productNum++
+            cart.product2.num++
+            cart.totalPrice += 200;
+            saveCart();
+            showCart();
+        '>加入購物車</button>
+
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+        
+        <script>
+            let cart = JSON.parse(localStorage.getItem("cart"));
+
+            if (cart === null) {
+                cart = {
+                    productNum: 0,
+                    product1: {
+                        num: 0,
+                        name: "海底撈火鍋",
+                        price: 100
+                    },
+                    product2: {
+                        num: 0,
+                        name: "雞精",
+                        price: 200
+                    },
+                    totalPrice: 0
+                };
+            }
+            // let cart = {
+            //     productNum: 0,
+            //     product1: {
+            //         num: 0,
+            //         name: "海底撈火鍋",
+            //         price: 100
+            //     },
+            //     product2: {
+            //         num: 0,
+            //         name: "雞精",
+            //         price: 200
+            //     },
+            //     totalPrice: 0
+            // };
+
+            //存入資料
+            function saveCart() {
+                const jsonCart = JSON.stringify(cart);
+                localStorage.setItem("cart",jsonCart);
+            }
+
+            function showCart() {
+                    console.log(`目前商品數 : ${cart.productNum}`);
+                    console.log(`${cart.product1.name}有 : ${cart.product1.num} 個`);
+                    console.log(`${cart.product2.name}有 : ${cart.product2.num} 個`);
+                    console.log(`目前購物車總額 : ${cart.totalPrice}`);
+            }
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <img src="gift.png">
+        <br>
+        <p>$200</p>
+        <button onclick='
+            //讀取資料
+            cart1 = JSON.parse(localStorage.getItem("cart2"));
+            //修改資料
+            cart1.productNum++
+            cart1.product2.num++
+            cart1.totalPrice += 200;
+            //存入資料
+            jsonCart = JSON.stringify(cart1);
+            localStorage.setItem("cart2",jsonCart);
+            showCart();
+        '>加入購物車</button> -->
+
+
+        

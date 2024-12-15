@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>物件(對象)補充</title>
+    </head>
+    <body>
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+    <script>
+        
+        // const c = {
+        //     name: '小白',
+        //     age: 25
+        // };
+
+        // //可以只修改特定值，但不能直接覆蓋掉物件
+        // c.name = "小黑" 
+        // // c = "小黑"    //這是錯誤的寫法
+        // console.log(c);
+
+
+        //可以這樣寫
+        // const name = "小白";
+        // const age = 25;
+
+        // const c = {
+        //     name,
+        //     age
+        // };
+        // console.log(c);
+
+        //也可以這樣寫
+        // const c = {
+        //     name: '小白',
+        //     age: 25
+        // };
+        // const name = c.name;
+        // const age = c.age;
+        // console.log(name, age);
+
+        //而且有簡寫方法
+        // const {name, age} = c;  //這種寫法是把跟物件裡相同名稱的值直接取出來使用的方法
+        // console.log(name, age);
+
+
+
+        const c = {
+            name: '小白',
+            age: 25,
+            //可以在物件裡放函數
+            // hello: function hello() {    
+            //     console.log("你好")
+            // }
+
+            hello() {      //甚至可以直接簡寫成這個樣子
+                console.log("你好")
+            }
+        };
+
+        c.hello();
+
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+.product-name{
+    font-size: 26px;
+    font-weight: 900;
+    margin-top: 12px;
+}
+
+.product-rating{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+}
+
+.rating-count{
+    color: gray;
+    margin-right:10px;
+}
+
+.rating-stars{
+    margin-right: 20px;
+    height: 20px;
+    margin-right: 30px;
+}
+
+.comment-num{
+    color: gray;
+}
+
+.sell-information{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+}
+
+.product-discount{
+    color: white;
+    background-color: #f86c45;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right:20px;
+    padding:2px 10px;
+}
+
+.sell-num{
+    font-size: 16px;
+    font-weight: 500;
+    color:gray;
+}
+
+.product-price{
+    margin-top:40px;
+    display: flex;
+    align-items: center;
+    background-color:rgb(242, 242, 242);
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.origin-price{
+    font-size: 20px;
+    font-weight: 500;
+    color:gray;
+    text-decoration:line-through;
+    margin-right:20px;
+}
+
+.discount-price{
+    font-size: 30px;
+    font-weight: 900;
+    color:red;
+}
+
+.buy-num-row{
+    display: flex;
+    align-items: center;
+    margin-top:40px;
+}
+
+.num-p{
+    font-size: 18px;
+    color: gray;
+    margin-right:40px;
+}
+
+.buy-num{
+    font-size: 18px;
+    width:100px;
+}
+
+.add-to-cart{
+    margin-top:50px;
+    width:200px;
+    font-size: 18px;
+    padding: 15px 0px;
+    background-color: #f86c45;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover{
+    background-color: #f87a58;
+}
+
+.add-to-cart:active{
+    background-color: #fc9376;
+}
+
+.add-success{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hidden-element {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+  
+.visible-element {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.check-icon{
+    height: 20px;
+    margin-right:10px;
+}
+
+.add-success-p{
+    color:rgb(6, 125, 98);
+    font-size: 18px;
+}
+
+
+.product-image{
+    width:400px;
+    border-radius: 16px;
+    margin-right:30px;
+}
+
+.product-block{
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    padding:10px 40px 25px 40px;
+    align-items: start;
+}
+
+.product-information{
+    flex:1;
+    margin:12px;
+}
+
+.description-block{
+    margin-top:40px;
+    margin-bottom:40px;
+    background-color: white;
+    border-radius: 15px;
+    padding:40px;
+}
+
+.description-p{
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 8px;
+}
+
+.product-description{
+    margin-top:30px;
+    padding: 0 20px;
+    line-height: 45px;
+}

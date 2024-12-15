@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>陣列(數組) array</title>
+    </head>
+    <body>
+
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+
+        <script>
+            let array = [10, 20, "你好", true, {value:20}, 60, [1, 2]]; //利用中括號把東西包起來，可以是任何值，包括陣列也是
+            console.log(array);   //會顯示有多少筆資料，可以展開來看裡面的資料
+
+
+            // console.log(array[0])  //如果要取得陣列裡某一筆資料，就要在陣列名稱後面放中括號，然後括號內放索引值
+            
+            array[0] = 30;   //我們是可以修改陣列裡的資料的
+            console.log(array);
+
+            console.log(typeof array);  //其實陣列是一個物件
+
+            console.log(array.length);  //這個是看陣列有多長，有幾筆資料
+            
+            // array.push(10);   //這個就是新增資料 就是python的append()
+            // console.log(array);
+
+            
+            // array.splice(0, 3);  //這個寫法是把資料做切割，從第0筆資料開始，切掉1筆資料
+            // console.log(array);
+
+
+        </script>
+    </body>
+</html>

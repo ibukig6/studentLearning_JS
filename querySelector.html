@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>querySelector 方法</title>
+    </head>
+    <body>
+        <button>你好</button>
+        <p>小伍</p>
+        <p class="js-p">小黑</p>   <!--如果有兩個p的話，程式會預設取第一個，但我們給他一個class 或者 CSS學到的id，我們就可以根據這個數值去選取我們需要的標籤-->
+        <p id="js-id">小黃</p>
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+        <script>
+            // const buttonElement =
+            // document.querySelector("button");  
+            // buttonElement.innerHTML = "哈哈"  //記得，這行最前面的名字要正確  
+                                                //!!!innerHTML這個方法僅能讀取開啟以及關閉的中間字串 ps:  <p> 這裡就是中間字串 </p> 
+            // console.log(buttonElement.innerHTML);//比較可惜的是，這個與影片不同
+
+            
+            const pElement =
+            document.querySelector(".js-p");  //這是class的寫法
+            pElement.innerHTML = "小紅";   //記得，這行最前面的名字要正確
+            console.log(pElement);
+
+            const pElement2 =
+            document.querySelector("#js-id");  //這是id的寫法
+            pElement2.innerHTML = "小青";  //記得，這行最前面的名字要正確
+            console.log(pElement2);
+
+            
+
+        </script>
+    </body>
+</html>

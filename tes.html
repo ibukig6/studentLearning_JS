@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Button ID on Click</title>
+    <script>
+        window.onload = function () {
+            // 找到所有的按鈕元素
+            var buttons = document.querySelectorAll("button");
+
+            // 對每個按鈕都添加點擊事件監聽器
+            buttons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    // 取得按鈕的 ID
+                    var buttonId = this.id;
+
+                    // 呼叫函數，將按鈕的 ID 傳遞給它
+                    handleClick(buttonId);
+                });
+            });
+
+            // 定義一個函數，接受按鈕的 ID 作為參數
+            function handleClick(buttonId) {
+                alert("你按下的按鈕的 ID 是：" + buttonId);
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <button id="button1">按鈕 1</button>
+    <button id="button2">按鈕 2</button>
+    <button id="button3">按鈕 3</button>
+    <!-- 可能還有更多的按鈕 -->
+</body>
+
+</html>

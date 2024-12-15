@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗1</title>
+        <style>
+            button {
+                font-size: 25px;
+                margin-right: 10px;
+
+            }
+            p {
+                font-size: 25px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            img {
+                height: 200px;
+                display: block;
+                /* margin-top:50px; */
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="console.log(`目前購物車總額 : ${total}`);">購物車總額</button>
+        
+        <button onclick="
+            total = 0;
+            console.log('購物車已清空');
+            console.log(`目前購物車總額 : ${total}`);
+        ">清空購物車</button>
+        <br>
+        
+        <img src="hot pot.jpg">
+        <br>
+        <p>$100</p>
+        <button onclick='
+            total += 100;
+            console.log(`目前購物車總額 : ${total}`);
+        '>加入購物車</button>
+
+        <img src="gift.png">
+        <br>
+        <p>$200</p>
+        <button onclick='
+            total += 200;
+            console.log(`目前購物車總額 : ${total}`);
+        '>加入購物車</button>
+
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+        
+        <script>
+            
+            let total = 0;
+            let age = 20;
+            let height = 168;
+            let des = `小伍今年${age}歲 身高${height}公分`;   //文字的第三種表示法，模板字串，用途是可以在字串裡面放入變數，用法是 ${這裡放變數}       ps:反引號，在~鍵那個位置
+            
+            let name = `
+            小伍
+            好帥
+            `;    //模板字串是可以直接做換行的
+            let name2 = "小伍\n好帥"  //普通字串必須塞入 \n 才能換行
+            //console.log(des);
+            
+            //這是運算的簡寫方式
+            total += 200;
+            total ++;
+            total --;    
+            console.log(total);
+
+            //設置變數
+            let x = 100; //用let創建的變數可以變更數值
+            const y = 200; //用const創建的變數不可以變更數值
+            var z = 300; //var是早期創建變數的一種方式，但由於存在一些問題，所以現在都不使用這個方式了
+
+            
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

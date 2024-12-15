@@ -1,0 +1,135 @@
+.product-image{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.product-block{
+    background-color: white;
+    border-width: 1px;
+    border-color: #c9cce2;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.product-text{
+    padding:4px 12px 20px 12px;
+    word-break: break-all;
+}
+
+.product-information{
+    /* margin-top:12px; */
+}
+
+.product-name{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+    font-size: 16px;
+    height: 50px;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.add-success{
+    display: flex;
+    align-items: center;
+}
+
+.hidden-element {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+  
+.visible-element {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.check-icon{
+    height: 20px;
+    margin-right:10px;
+}
+
+.add-success-p{
+    color:rgb(6, 125, 98);
+}
+
+
+.discount-price{
+    font-weight: 900;
+    font-size: 20px;
+    color: red;
+    /* word-break: break-all; */
+}
+
+.origin-price{
+    font-weight: 200;
+    font-size: 16px;
+    color: gray;
+    text-decoration: line-through;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 16px;
+    margin-bottom: 60px;
+}
+
+@media (max-width:600px){
+    .product-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:601px) and (max-width:800px){
+    .product-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width:801px) and (max-width:999px){
+    .product-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width:1000px){
+    .product-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+.product-image-row{
+    position: relative;
+    z-index: 1;
+}
+
+.product-discount{
+    color: white;
+    background-color: #f86c45;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 0 4px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.add-to-cart{
+    height: 20px;
+    background-color:#f86c45;
+    padding:5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-price-row{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

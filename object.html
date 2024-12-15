@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>物件</title>
+        <style>
+            button {
+                font-size: 25px;
+                margin-right: 10px;
+
+            }
+            p {
+                font-size: 25px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            img {
+                height: 200px;
+                display: block;
+                /* margin-top:50px; */
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="console.log(`目前購物車總額 : ${total}`);">購物車總額</button>
+        
+        <button onclick="
+            total = 0;
+            console.log('購物車已清空');
+            console.log(`目前購物車總額 : ${total}`);
+        ">清空購物車</button>
+        <br>
+        
+        <img src="hot pot.jpg">
+        <br>
+        <p>$100</p>
+        <button onclick='
+            total += 100;
+            console.log(`目前購物車總額 : ${total}`);
+        '>加入購物車</button>
+
+        <img src="gift.png">
+        <br>
+        <p>$200</p>
+        <button onclick='
+            total += 200;
+            console.log(`目前購物車總額 : ${total}`);
+        '>加入購物車</button>
+
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+        
+        <script>
+            
+            //物件 object
+            //讓我們把資料結合在一起
+            let product = {
+                name: "海底撈泡麵", //如果下面還有物件的話，這行結尾必須要有一個逗號 ,
+                price: 100
+            };
+
+            console.log(product); //可以用這種方法把物品群組起來
+            console.log(product.name); //可以在我們創建的物品裡指定出我們需要抓的屬性
+            
+            console.log({     //也可以直接寫在console裡，但會很亂
+                name: "雞精",
+                price: 200
+            });
+
+
+            //修改屬性
+            product.price = 300   //並且也可以使用這種方式修改屬性
+            console.log(product.price);
+
+            //新增屬性
+            product.expiredDate = "2025/06/06";//也可以使用這種方式新增屬性
+            console.log(product);
+
+            //刪除屬性
+            delete product.price;
+            console.log(product);
+            //ps:這樣刪除物件是沒有用的！
+            // delete product;
+            // console.log(product);
+
+            //檢查資料型態
+            console.log(typeof product);
+            
+        </script>
+    </body>
+</html>

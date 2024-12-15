@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗5影片版</title>
+        <style>
+            button{
+                font-size:25px;
+                margin-right:10px;
+            }
+            p{
+                font-size: 25px;
+                display: inline-block;
+                margin-right:10px;
+            }
+            img{
+                height: 200px;
+                display: block;
+                margin-top:50px;
+            }
+            .cart{
+                margin-top: 50px;
+                display: block;
+                line-height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="
+            cart.productNum = 0;
+            cart.prodcut1.num = 0;
+            cart.prodcut2.num = 0;
+            cart.totalPrice = 0;
+            console.log('已清空購物車');
+            localStorage.removeItem('cart');
+            showCart();
+            showTotal();
+        ">清空購物車</button>
+
+        <img src="hot pot.jpg">
+        <p>$100</p>
+        <button onclick="
+            cart.productNum++;
+            cart.prodcut1.num++;
+            cart.totalPrice += 100;
+            saveCart();
+            showCart();
+            showTotal();
+        ">加入購物車</button>
+
+        <img src="gift.png">
+        <p>$200</p>
+        <button onclick="
+            cart.productNum++;
+            cart.prodcut2.num++;
+            cart.totalPrice += 200;
+            saveCart();
+            showCart();
+            showTotal();
+        ">加入購物車</button>
+        
+
+
+        <p class="cart">
+            
+        </p>
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+        <script>
+            
+            function showCart() {
+                document.querySelector('.cart').innerHTML =`
+                目前商品數 : ${cart.productNum}<br>
+                海底撈泡麵 : ${cart.prodcut1.num}<br>
+                養氣人蔘 : ${cart.prodcut2.num}<br>
+                目前購物車總額 : ${cart.totalPrice}
+                `;
+
+                console.log(`目前商品數 : ${cart.productNum}`);
+                console.log(`${cart.prodcut1.name} : ${cart.prodcut1.num}`);
+                console.log(`${cart.prodcut2.name} : ${cart.prodcut2.num}`);
+                console.log(`目前購物車總額 : ${cart.totalPrice}`);
+            }
+
+            function saveCart() {
+                const jsonCart = JSON.stringify(cart);
+                localStorage.setItem("cart", jsonCart);
+            }
+
+
+            let cart = JSON.parse(localStorage.getItem("cart")); 
+            
+            if (!cart) {
+                cart = {
+                    productNum: 0,
+                    prodcut1: {
+                        num: 0,
+                        name: "海底撈泡麵",
+                        price: 100
+                    },
+                    prodcut2: {
+                        num: 0,
+                        name: "養氣人蔘",
+                        price: 200
+                    },
+                    totalPrice: 0
+                };
+            }
+            
+            showCart();
+            
+
+
+
+        </script>
+    </body>
+</html>

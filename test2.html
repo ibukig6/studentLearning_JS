@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗2</title>
+        <style>
+            p {
+                font-size:30px;
+            }
+
+            button {
+                font-size:30px;
+                margin-right: 20px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+
+        
+
+        <p>請選擇 剪刀 石頭 布</p>
+        <button onclick='
+            
+            ///註解為原本寫法，但影片展示了更簡單的寫法
+
+            // const computerChoice = generateComputerChoice();
+            // playGame("剪刀",computerChoice);
+            playGame("剪刀");
+        '>剪刀</button>
+        <button onclick='
+            // const computerChoice = generateComputerChoice();
+            // playGame("石頭",computerChoice);
+            playGame("石頭");
+        '>石頭</button>
+        <button onclick='
+            // const computerChoice = generateComputerChoice();
+            // playGame("布",computerChoice);
+            playGame("布");
+        '>布</button>
+
+            <br><br><br><a href="index.html">返回上一頁</a>
+
+        <script>
+            ///電腦猜
+            function generateComputerChoice() {
+                const randomNum = Math.random()*3;
+                let computerChoice = "";
+                console.log(randomNum);
+                if (0<=randomNum && randomNum<1) {
+                    computerChoice = "剪刀";
+                } else if (1<=randomNum && randomNum<2) {
+                    computerChoice = "石頭";
+                } else {
+                    computerChoice = "布";
+                }
+                return computerChoice;
+            }
+
+            ///輸贏判斷
+            function playGame(userChoice) {    //原本寫法: function playGame(userChoice, computerChoice)
+                const computerChoice = generateComputerChoice();
+                text = "你出" + userChoice + ",電腦出" + computerChoice
+                if (userChoice === "剪刀" && computerChoice === "布" || userChoice === "石頭" && computerChoice === "剪刀" || userChoice === "布" && computerChoice === "石頭") {
+                    alert(text + ",此局你獲勝");
+                } else if (userChoice === computerChoice) {
+                    alert(text + ",此局平手");
+                } else {
+                    alert(text + ",此局電腦獲勝");
+                }
+            }
+
+        </script>
+    </body>
+</html>

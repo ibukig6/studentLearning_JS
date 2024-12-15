@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗1</title>
+        <style>
+            button {
+                font-size: 25px;
+                margin-right: 10px;
+
+            }
+            p {
+                font-size: 25px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+            img {
+                height: 200px;
+                display: block;
+                /* margin-top:50px; */
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="
+            cart.showCart();
+        ">購物車總額</button>
+        
+        <button onclick="
+            cart.productNum = 0;
+            cart.product1.num = 0;
+            cart.product2.num = 0;
+            cart.totalPrice = 0;
+            console.log('購物車已清空');
+            cart.showCart();
+        ">清空購物車</button>
+        <br>
+        
+        <img src="hot pot.jpg">
+        <br>
+        <p>$100</p>
+        <button onclick='
+            cart.productNum +=1;
+            cart.product1.num++
+            cart.totalPrice += 100;
+            cart.showCart();
+        '>加入購物車</button>
+
+        <img src="gift.png">
+        <br>
+        <p>$200</p>
+        <button onclick='
+            cart.productNum++
+            cart.product2.num++
+            cart.totalPrice += 200;
+            cart.showCart();
+        '>加入購物車</button>
+
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+        
+        <script>
+
+            let total = 0;
+            let cart = {
+                productNum: 0,
+                product1: {    //物件裡其實可以再放物件(請看95行)
+                    num: 0,
+                    name: "海底撈火鍋",
+                    price: 100
+                },
+                product2: {
+                    num: 0,
+                    name: "雞精",
+                    price: 200
+                },
+                totalPrice: 0,
+                showCart: function showCart() {        //我們也可以直接在物件裡面寫函數
+                    console.log(`目前商品數 : ${cart.productNum}`);
+                    console.log(`${cart.product1.name}有 : ${cart.product1.num} 個`);
+                    console.log(`${cart.product2.name}有 : ${cart.product2.num} 個`);
+                    console.log(`目前購物車總額 : ${cart.totalPrice}`);
+                }
+            };
+
+            cart.showCart();   //對應77~82行
+            
+            //這是object抓取資料的方法有兩種：
+            //cart.totalPrice
+            //cart['totalPrice']      這個方法要注意的是，中括號裡面的值要使用字串
+
+            console.log("-----");  //其實console就是js內建的物件，然後log()是裡面的函數，可以用 console.log(typeof console);查看
+
+            console.log(cart["totalPrice"]);
+
+            console.log(cart.product1.name);  //這樣如果有太多層級的商品時，我們就可以依序分類了(請看66行)
+
+
+
+
+        </script>
+    </body>
+</html>

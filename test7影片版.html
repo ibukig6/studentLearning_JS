@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗7影片版</title>
+    </head>
+    <body>
+
+        <input class="inputproduct" placeholder="請輸入商品名稱">
+        <button onclick="
+            add();
+        ">新增</button>
+
+        <div>
+            
+        </div>
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+        <script>
+
+            let list = [];
+            function add() {
+                let product = document.querySelector(".inputproduct");
+                list.push(product.value);
+                product.value = "";
+
+                let addp = "";
+                for (let i =0; i<list.length; i++) {
+                    addp += `<p>${list[i]}</p>`;
+                }
+                document.querySelector('div').innerHTML = addp;
+            }
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗7</title>
+    </head>
+    <body>
+
+        <input class="inputproduct" placeholder="請輸入商品名稱">
+        <button onclick="
+            add();
+        ">新增</button>
+
+        <div>
+            
+        </div>
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+        <script>
+
+            // let list = [];
+            let addp = '';
+            let addiv = document.querySelector('div');//這個是關鍵，我是設變數先去指定div這個標籤，後續才能做寫入這個動作，甚至我們可以直接省略這行
+            function add() {
+                const product = document.querySelector(".inputproduct");
+                
+                // list.push(product);
+                // console.log(list);          //檢查用
+                addp = `<p>${product.value}</p>`;
+                // console.log(addp);       //檢查用
+                addiv.innerHTML += addp;
+                product.value = ""
+            }
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>迴圈的break、continue</title>
+    </head>
+    <body>
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+        <script>
+            /*
+            for (let i=0; i<10; i++) {
+                if (i === 5) {
+                    break;          //break就是直接中止迴圈
+                }
+                console.log(i);
+            }
+
+            for (let i=0; i<10; i++) {
+                if (i === 5) {
+                    continue;          //continue就是跳過這一次的迴圈
+                }
+                console.log(i);
+            }
+
+            let i = 0;
+            while (i < 10) {
+                if (i === 5) {
+                    i++;                //這個寫法是以防變成無限迴圈
+                    continue;          //continue就是跳過這一次的迴圈
+                }
+                console.log(i);
+                i++;    //值得注意的是，如果使用while迴圈的話，要注意放置的位置，不然有可能會成為無限迴圈，導致網頁塞爆
+            }
+            */
+
+            let nums = [100, 90, 50, 80, 70, 60];
+            let found = false;
+            for (let i=0; i<nums.length; i++) {
+                if (nums[i] === 100){
+                    found = true;
+                    break
+                }
+            }
+            console.log(found);
+
+        </script>
+    </body>
+</html>

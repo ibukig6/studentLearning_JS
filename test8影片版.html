@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>測驗8影片版</title>
+    </head>
+    <body>
+
+        <input class="inputproduct" placeholder="請輸入商品名稱">
+        <input class="inputprice" placeholder="請輸入商品價格">
+        <button onclick="add();">新增</button>
+
+        <div class="product-grid">
+
+        </div>
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+        <script>
+
+            let productList = [];
+            function add() {
+                let product = document.querySelector(".inputproduct");
+                let price = document.querySelector(".inputprice");
+                productList.push({
+                    name: product.value,
+                    num: price.value 
+                });
+                product.value = "";
+                price.value = "";
+                console.log(productList);       //檢查用
+
+                renderProducts();
+            }
+
+            function removeProduct(i) {
+                productList.splice(i,1);
+                renderProducts();
+                console.log(productList);       //檢查用
+            }
+
+            function renderProducts() {
+                let html = "";
+                for (let i = 0; i < productList.length; i++) {
+                    html +=`
+                        <div style="display: block;">${productList[i].name}</div>
+                        <div style="display: block;">${productList[i].num}</div>
+                        <button onclick="removeProduct(${i})">刪除</button>
+                    `;
+                }
+                document.querySelector(".product-grid").innerHTML = html;
+            }
+            
+
+        </script>
+    </body>
+</html>

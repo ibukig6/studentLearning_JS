@@ -1,0 +1,208 @@
+.checkout-row{
+    display: flex;
+    align-items: start;
+    margin-bottom:60px;
+}
+
+.checkout-left{
+    width:800px;
+    margin-right:40px;
+    min-width: 580px;
+}
+
+.checkout-right{
+    background-color: white;
+    flex:1;
+    border-radius: 15px;
+    padding:20px;
+    min-width: 200px;
+}
+
+.product-image{
+    width:200px;
+    margin-right:20px;
+    border-radius: 10px;
+}
+
+.product-row{
+    padding:20px;
+    display: flex;
+    margin-bottom:20px;
+    background-color: white;
+    border-radius: 18px;
+    align-items: start;
+}
+
+.product-name{
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.product-information{
+    flex:1;
+}
+
+.product-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-information-hr{
+    margin: 30px 0px;
+}
+
+.product-price{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+}
+
+.origin-price{
+    font-size: 16px;
+    font-weight: 500;
+    color:gray;
+    text-decoration:line-through;
+    margin-right:20px;
+}
+
+.discount-price{
+    font-size: 24px;
+    font-weight: 900;
+    color:red;
+}
+
+.buy-num-row{
+    display: flex;
+    align-items: center;
+    margin-top:20px;
+}
+
+.num-p{
+    font-size: 16px;
+    color: gray;
+    margin-right:40px;
+}
+
+.buy-num{
+    font-size: 16px;
+    width:100px;
+    padding: 0px 10px;
+}
+
+.delete-from-cart{
+    /* margin-top:20px; */
+    width:80px;
+    font-size: 16px;
+    padding: 8px 0px;
+    background-color: #f86c45;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete-from-cart:hover{
+    background-color: #f87a58;
+}
+
+.delete-from-cart:active{
+    background-color: #fc9376;
+}
+
+.delivery-option-p{
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.delivery-option{
+    margin-bottom:10px;
+    display: flex;
+    align-items: center;
+}
+
+.delivery-option-input{
+    /* height:25px; */
+    margin-top:2px;
+    /* display: flex;
+    align-items: center; */
+}
+
+.delivery-option-input,
+.delivery-option-name{
+    margin-right:20px;
+}
+
+.delivery-option-name{
+    font-size:16px;
+    font-weight: 500;
+    color: gray;
+}
+
+.delivery-option-price{
+    font-size:16px;
+    font-weight: 900;
+    color: red;
+}
+
+
+.heckout-summary{
+    font-size: 30px;
+}
+
+.checkout-items{
+    margin-top:30px;
+    font-size:20px;
+}
+
+.items-price{
+    margin-top:15px;
+    font-size:20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery-price{
+    margin-top:15px;
+    font-size:20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-summary-hr{
+    margin:20px 0px;
+}
+
+.total-price{
+    font-size:20px;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price span
+{
+    color:red;
+}
+
+.checkout-button{
+    margin-top:40px;
+    font-size:20px;
+    width:100%;
+    background-color: #f86c45;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px 0px;
+    margin-bottom: 10px;
+}
+
+.checkout-button:hover{
+    background-color: #f87a58;
+}
+
+.checkout-button:active{
+    background-color: #fc9376;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Primitive & Reference Types</title>
+    </head>
+    <body>
+
+
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+        <script>
+
+            // 資料的儲存方式
+
+            // 基本類型 & 引用類型
+            // 基本類型： 數字 字串  布林值 符號 未定義
+            // 引用類型： 物件 陣列 函式 日期
+            
+            //基本類型
+            let a = 10;  //這些資料會被儲存在stack裡面
+            let b = 10;
+            console.log(b);
+
+            //引用類型
+            let c = {    // 這些資料會被存在heap堆裡面，並在stack裡留下能從heap裡找到這些資料的位置
+                name: "小伍",
+                age: 20
+            }
+            let d = {
+                name: "小伍",
+                age: 20
+            }
+            //不同類型被儲存在不同地方的原因是基本類型資料比較小，而引用類型資料太複雜，所以會儲存在比較大的地方
+
+
+            console.log(a===b);
+            console.log(c===d);//明明兩個存的東西相同，但出來卻不一樣，原因是電腦只會判斷這兩個在stack裡的地址，並不會判斷heap裡的資料
+        </script>
+    </body>
+</html>

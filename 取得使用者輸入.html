@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>取得使用者輸入</title>
+    </head>
+    <body>
+
+        <input class="inputHeight" placeholder="請輸入身高(公分)">
+
+        <button onclick="
+            calculateHeight();
+        ">計算</button>
+        <p class="convertHeight">身高: 公尺</p>
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+
+
+        <script>
+
+            function calculateHeight() {
+                let height = document.querySelector('input').value; //想要取得<input>裡面的值，就要使用value這個指令  
+                console.log(typeof height);  //但是要注意，我們取出來的資料型態都是字串
+                height = Number(height);  //用這個方法就可以把資料型態改變成數值型態了
+                height /= 100;
+                console.log(height);
+                document.querySelector('p').innerHTML = `
+                    身高: ${height}公尺
+                `;
+            }
+
+            let x = String(10);
+            console.log(typeof x);  //額外補充，這是轉換成字串的方法
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM - Document Object Model</title>
+    </head>
+    <body>
+        <button>你好</button>
+        <br><br><br><a href="index.html">返回上一頁</a>
+    
+    
+        <script>
+            // document 物件
+            //document.body.innerHTML = "小伍好帥"
+            //console.log(document.body.innerHTML);   //這裡就可以讀取到 <body>裡面的值
+
+
+            document.body.innerHTML =  //可以用這種方式直接修改程式
+            "<button>小伍好帥</button>";
+            console.log(document.body);
+
+            // document.title = "小伍好帥";
+            // console.log(document.title);
+
+            //實際應用
+            document.body.innerHTML = 
+            "<a href='index.html'>click me</a>";
+            console.log(document.body.innerHTML);
+            
+        </script>
+    </body>
+</html>

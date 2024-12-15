@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>猜拳</title>
+        <style>
+            p {
+                font-size:30px;
+            }
+
+            button {
+                font-size:30px;
+                margin-right: 20px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>請選擇 剪刀 石頭 布</p>
+        <button onclick='
+            const randomNum = Math.random()*3;
+            let computerChoice = ""
+            console.log(randomNum);
+            if (0<=randomNum && randomNum<1) {
+                computerChoice = "剪刀";
+            } else if (1<=randomNum && randomNum<2) {
+                computerChoice = "石頭";
+            } else {
+                computerChoice = "布";
+            }
+
+            if (computerChoice === "剪刀") {
+                alert(`你出剪刀 電腦出${computerChoice} 此局平手`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出剪刀 電腦出${computerChoice} 此局電腦獲勝`);
+            } else {
+                alert(`你出剪刀 電腦出${computerChoice} 此局你獲勝`);
+            }
+        '>剪刀</button>
+        <button onclick='
+            const randomNum = Math.random()*3;
+            let computerChoice = ""
+            console.log(randomNum);
+            if (0<=randomNum && randomNum<1) {
+                computerChoice = "剪刀";
+            } else if (1<=randomNum && randomNum<2) {
+                computerChoice = "石頭";
+            } else {
+                computerChoice = "布";
+            }
+
+            if (computerChoice === "剪刀") {
+                alert(`你出石頭 電腦出${computerChoice} 此局你獲勝`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出石頭 電腦出${computerChoice} 此局平手`);
+            } else {
+                alert(`你出石頭 電腦出${computerChoice} 此局電腦獲勝`);
+            }
+        '>石頭</button>
+        <button onclick='
+            const randomNum = Math.random()*3;
+            let computerChoice = ""
+            console.log(randomNum);
+            if (0<=randomNum && randomNum<1) {
+                computerChoice = "剪刀";
+            } else if (1<=randomNum && randomNum<2) {
+                computerChoice = "石頭";
+            } else {
+                computerChoice = "布";
+            }
+
+            if (computerChoice === "布") {
+                alert(`你出布 電腦出${computerChoice} 此局電腦獲勝`);
+            } else if (computerChoice === "石頭") {
+                alert(`你出布 電腦出${computerChoice} 此局你獲勝`);
+            } else {
+                alert(`你出布 電腦出${computerChoice} 此局平手`);
+            }
+        '>布</button>
+
+
+        <br><br><br><a href="index.html">返回上一頁</a>
+        <script>
+            
+        </script>
+    </body>
+</html>
